@@ -6,6 +6,11 @@ const MenuOverlay = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50">
+      {/* Fondo negro semi-transparente */}
+      <div 
+        className="absolute inset-0 bg-black bg-opacity-50"
+        onClick={onClose}
+      ></div>
       <ul className="sal-menu-list" style={{
         transform: 'translateX(0)',
         position: 'fixed',
