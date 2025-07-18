@@ -4,7 +4,7 @@ const Header = () => (
   <header className="w-full bg-white shadow-md">
     <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
       {/* Logo */}
-      <div className="text-2xl font-bold text-blue-600">Salva</div>
+      <div className="text-2xl font-bold text-blue-600">Nery</div>
       {/* Navigation */}
       <nav className="hidden md:flex gap-8">
         <a href="#servicios" className="text-gray-700 hover:text-blue-600 transition">Servicios</a>

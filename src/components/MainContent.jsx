@@ -198,7 +198,7 @@ const MainContent = ({ children }) => {
       <div className="w-[90%] flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between px-10 py-8 border-b-2 border-black h-24">
-          <div className="text-4xl font-extrabold tracking-widest">SALVA</div>
+          <div className="text-4xl font-extrabold tracking-widest">Nery</div>
         </div>
         
         {/* Contenido dinámico */}
