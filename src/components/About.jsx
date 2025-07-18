@@ -1,7 +1,8 @@
 import React from "react";
+import { Icon } from "@iconify/react";
 
 const About = () => (
-  <div className="w-full min-h-screen bg-white flex flex-col gap-16 py-16 px-4">
+  <div className="w-full min-h-screen bg-white flex flex-col gap-16 py-16 px-10">
     {/* Sección 1: Introducción */}
     <section className="max-w-4xl mx-auto w-full">
       <h1 className="text-5xl font-extrabold text-black mb-2">About</h1>
@@ -72,28 +73,28 @@ const About = () => (
           <div className="flex gap-8 justify-center md:justify-start">
             {/* React */}
             <div className="flex flex-col items-center">
-              <svg width="90" height="90" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="40" stroke="#e5e7eb" strokeWidth="8" fill="none" />
-                <circle cx="50" cy="50" r="40" stroke="#2563eb" strokeWidth="8" fill="none" strokeDasharray="251.2" strokeDashoffset="50.24" style={{transition: 'stroke-dashoffset 1s'}} />
-                <text x="50%" y="54%" textAnchor="middle" fontSize="24" fontWeight="bold" fill="#222">80%</text>
+              <svg width="120" height="120" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="52" stroke="#e5e7eb" strokeWidth="3" fill="none" />
+                <circle cx="60" cy="60" r="52" stroke="#2563eb" strokeWidth="3" fill="none" strokeDasharray="326.72" strokeDashoffset="65.344" style={{transition: 'stroke-dashoffset 1s'}} />
+                <text x="50%" y="54%" textAnchor="middle" fontSize="28" fontWeight="bold" fill="#222">80%</text>
               </svg>
               <span className="mt-2 font-medium">React</span>
             </div>
             {/* Elementor */}
             <div className="flex flex-col items-center">
-              <svg width="90" height="90" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="40" stroke="#e5e7eb" strokeWidth="8" fill="none" />
-                <circle cx="50" cy="50" r="40" stroke="#ef4444" strokeWidth="8" fill="none" strokeDasharray="251.2" strokeDashoffset="100.48" style={{transition: 'stroke-dashoffset 1s'}} />
-                <text x="50%" y="54%" textAnchor="middle" fontSize="24" fontWeight="bold" fill="#222">60%</text>
+              <svg width="120" height="120" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="52" stroke="#e5e7eb" strokeWidth="3" fill="none" />
+                <circle cx="60" cy="60" r="52" stroke="#ef4444" strokeWidth="3" fill="none" strokeDasharray="326.72" strokeDashoffset="130.688" style={{transition: 'stroke-dashoffset 1s'}} />
+                <text x="50%" y="54%" textAnchor="middle" fontSize="28" fontWeight="bold" fill="#222">60%</text>
               </svg>
               <span className="mt-2 font-medium">Elementor</span>
             </div>
             {/* Tailwind CSS */}
             <div className="flex flex-col items-center">
-              <svg width="90" height="90" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="40" stroke="#e5e7eb" strokeWidth="8" fill="none" />
-                <circle cx="50" cy="50" r="40" stroke="#22d3ee" strokeWidth="8" fill="none" strokeDasharray="251.2" strokeDashoffset="125.6" style={{transition: 'stroke-dashoffset 1s'}} />
-                <text x="50%" y="54%" textAnchor="middle" fontSize="24" fontWeight="bold" fill="#222">50%</text>
+              <svg width="120" height="120" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="52" stroke="#e5e7eb" strokeWidth="3" fill="none" />
+                <circle cx="60" cy="60" r="52" stroke="#22d3ee" strokeWidth="3" fill="none" strokeDasharray="326.72" strokeDashoffset="163.36" style={{transition: 'stroke-dashoffset 1s'}} />
+                <text x="50%" y="54%" textAnchor="middle" fontSize="28" fontWeight="bold" fill="#222">50%</text>
               </svg>
               <span className="mt-2 font-medium">Tailwind CSS</span>
             </div>
@@ -102,8 +103,206 @@ const About = () => (
       </div>
     </section>
 
+    {/* Sección extra: Gráficas de Base de Datos y Otros */}
+    <section className="max-w-6xl mx-auto w-full mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* Columna izquierda: Base de Datos */}
+        <div>
+          <div className="flex items-center mb-8">
+            <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Base de Datos</h2>
+            <span className="inline-block h-[1.25em] w-0.5 bg-black align-middle" style={{verticalAlign: 'middle'}}></span>
+            <div className="flex-1 border-t border-black ml-px" style={{verticalAlign: 'middle'}} />
+          </div>
+          {/* Barras de progreso */}
+          <div className="mb-6">
+            <div className="flex justify-between mb-1"><span>PostgreSQL</span><span>45%</span></div>
+            <div className="w-full h-1.5 bg-gray-200 rounded"><div className="h-1.5 bg-blue-800 rounded" style={{width: '45%'}}></div></div>
+          </div>
+          <div className="mb-6">
+            <div className="flex justify-between mb-1"><span>MySQL</span><span>50%</span></div>
+            <div className="w-full h-1.5 bg-gray-200 rounded"><div className="h-1.5 bg-yellow-700 rounded" style={{width: '50%'}}></div></div>
+          </div>
+          <div className="mb-6">
+            <div className="flex justify-between mb-1"><span>MongoDB</span><span>50%</span></div>
+            <div className="w-full h-1.5 bg-gray-200 rounded"><div className="h-1.5 bg-green-700 rounded" style={{width: '50%'}}></div></div>
+          </div>
+        </div>
+        {/* Columna derecha: Otros (círculos de progreso) */}
+        <div>
+          <div className="flex items-center mb-8">
+            <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Otros</h2>
+            <span className="inline-block h-[1.25em] w-0.5 bg-black align-middle" style={{verticalAlign: 'middle'}}></span>
+            <div className="flex-1 border-t border-black ml-px" style={{verticalAlign: 'middle'}} />
+          </div>
+          <div className="flex gap-8 justify-center md:justify-start">
+            {/* Sass */}
+            <div className="flex flex-col items-center">
+              <svg width="120" height="120" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="52" stroke="#e5e7eb" strokeWidth="3" fill="none" />
+                <circle cx="60" cy="60" r="52" stroke="#d946ef" strokeWidth="3" fill="none" strokeDasharray="326.72" strokeDashoffset="32.672" style={{transition: 'stroke-dashoffset 1s'}} />
+                <text x="50%" y="54%" textAnchor="middle" fontSize="28" fontWeight="bold" fill="#222">90%</text>
+              </svg>
+              <span className="mt-2 font-medium">Sass</span>
+            </div>
+            {/* Supabase */}
+            <div className="flex flex-col items-center">
+              <svg width="120" height="120" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="52" stroke="#e5e7eb" strokeWidth="3" fill="none" />
+                <circle cx="60" cy="60" r="52" stroke="#38bdf8" strokeWidth="3" fill="none" strokeDasharray="326.72" strokeDashoffset="179.696" style={{transition: 'stroke-dashoffset 1s'}} />
+                <text x="50%" y="54%" textAnchor="middle" fontSize="28" fontWeight="bold" fill="#222">45%</text>
+              </svg>
+              <span className="mt-2 font-medium">Supabase</span>
+            </div>
+            {/* TypeScript */}
+            <div className="flex flex-col items-center">
+              <svg width="120" height="120" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="52" stroke="#e5e7eb" strokeWidth="3" fill="none" />
+                <circle cx="60" cy="60" r="52" stroke="#2563eb" strokeWidth="3" fill="none" strokeDasharray="326.72" strokeDashoffset="130.688" style={{transition: 'stroke-dashoffset 1s'}} />
+                <text x="50%" y="54%" textAnchor="middle" fontSize="28" fontWeight="bold" fill="#222">60%</text>
+              </svg>
+              <span className="mt-2 font-medium">TypeScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Sección 4: Educación y Experiencia */}
+    <section className="max-w-5xl mx-auto w-full mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* Columna izquierda: Education */}
+        <div>
+          <div className="flex items-center mb-8">
+            <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Educación</h2>
+            <span className="inline-block h-[1.25em] w-0.5 bg-black align-middle" style={{verticalAlign: 'middle'}}></span>
+            <div className="flex-1 border-t border-black ml-px" style={{verticalAlign: 'middle'}} />
+          </div>
+          <div className="border border-gray-300 p-6 bg-white">
+            <div className="inline-block bg-gray-200 px-4 py-2 text-lg font-medium mb-4">2023 - 2025</div>
+            <div className="font-bold text-lg mb-2">Perito en Computación</div>
+            <div className="text-gray-600">Desarrollo de aplicaciones web y móviles con Javascript, diseño de redes informáticas con Cisco System, aplicaciones de escritorio y web con Java. Manejo de base de datos relacionales y no relacionales</div>
+          </div>
+        </div>
+        {/* Columna derecha: Experience */}
+        <div>
+          <div className="flex items-center mb-8">
+            <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Experience</h2>
+            <span className="inline-block h-[1.25em] w-0.5 bg-black align-middle" style={{verticalAlign: 'middle'}}></span>
+            <div className="flex-1 border-t border-black ml-px" style={{verticalAlign: 'middle'}} />
+          </div>
+          <div className="border border-gray-300 p-6 bg-white">
+            <div className="inline-block bg-gray-200 px-4 py-2 text-lg font-medium mb-4">2024-2025</div>
+            <div className="font-bold text-lg mb-2">Desarrollador web</div>
+            <div className="text-gray-600">Desarrollar paginas web para empresas del extranjero y aplicaciones web para sistemas POS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Sección 5: Servicios */}
+    <section className="max-w-5xl mx-auto w-full mt-12">
+      <div className="flex items-center mb-8">
+        <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Services</h2>
+        <span className="inline-block h-[1.25em] w-0.5 bg-black align-middle" style={{verticalAlign: 'middle'}}></span>
+        <div className="flex-1 border-t border-black ml-px" style={{verticalAlign: 'middle'}} />
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { title: 'Web Development', icon: 'mdi:laptop', desc: 'Morbi nullam sit dolor diam aenean gravida. Eget commodo blandit volutpat quis tristique risus, sed. Sed et.' },
+          { title: 'App Development', icon: 'mdi:cellphone', desc: 'Morbi nullam sit dolor diam aenean gravida. Eget commodo blandit volutpat quis tristique risus, sed. Sed et.' },
+          { title: 'Animation', icon: 'mdi:cube', desc: 'Morbi nullam sit dolor diam aenean gravida. Eget commodo blandit volutpat quis tristique risus, sed. Sed et.' },
+        ].map((srv, i) => (
+          <div key={i} className="service-card-wrap relative border border-gray-300 bg-white p-8 flex flex-col items-center text-center min-h-[260px] overflow-hidden group transition-colors duration-300">
+            {/* Esquina decorativa */}
+            <div className="absolute top-0 right-0 w-12 h-12 overflow-hidden">
+              <div className="w-8 h-8 bg-black rotate-45 translate-x-4 -translate-y-4"></div>
+            </div>
+            <Icon icon={srv.icon} className="text-5xl mb-4 text-black group-hover:text-white transition-colors duration-300 z-10 relative" />
+            <div className="font-bold text-lg mb-2 group-hover:text-white transition-colors duration-300 z-10 relative">{srv.title}</div>
+            <div className="text-gray-600 group-hover:text-white transition-colors duration-300 z-10 relative">{srv.desc}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    {/* Sección 5: Interests - Carrusel automático */}
+    <section className="max-w-5xl mx-auto w-full mt-12">
+      <div className="flex items-center mb-8">
+        <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Interests</h2>
+        <span className="inline-block h-[1.25em] w-0.5 bg-black align-middle" style={{verticalAlign: 'middle'}}></span>
+        <div className="flex-1 border-t border-black ml-px" style={{verticalAlign: 'middle'}} />
+      </div>
+      <InterestsCarousel />
+    </section>
+
     {/* Aquí puedes agregar más secciones en el futuro */}
   </div>
 );
+
+// Carrusel de intereses
+function InterestsCarousel() {
+  const interests = [
+    { name: "Senderismo", icon: "mdi:hiking" },
+    { name: "Videojuegos", icon: "mdi:controller" },
+    { name: "Viajar", icon: "mdi:earth" },
+    { name: "Lectura", icon: "mdi:book-open-page-variant" },
+    { name: "Viajar", icon: "mdi:earth" },
+    { name: "Fotografía", icon: "mdi:camera" },
+    { name: "Ciclismo", icon: "mdi:bike" },
+    { name: "Música", icon: "mdi:music" },
+    { name: "Cocinar", icon: "mdi:chef-hat" },
+    { name: "Cine", icon: "mdi:movie" },
+    { name: "Arte", icon: "mdi:palette" },
+    { name: "Correr", icon: "mdi:run" },
+    { name: "Nadar", icon: "mdi:swim" },
+    { name: "Programar", icon: "mdi:code-tags" },
+    { name: "Aprender", icon: "mdi:book-open-variant" },
+  ];
+  // Duplicar la lista para loop infinito visual
+  const items = [...interests, ...interests];
+  const [offset, setOffset] = React.useState(0);
+  const itemWidth = 120; // px (w-24 + gap)
+  const totalWidth = itemWidth * interests.length;
+
+  React.useEffect(() => {
+    let raf;
+    let last = Date.now();
+    function animate() {
+      const now = Date.now();
+      const delta = now - last;
+      last = now;
+      setOffset(prev => {
+        let next = prev + (delta * 0.03); // velocidad: px/ms
+        if (next >= totalWidth) return 0;
+        return next;
+      });
+      raf = requestAnimationFrame(animate);
+    }
+    raf = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(raf);
+  }, [totalWidth]);
+
+  return (
+    <div className="overflow-hidden w-full">
+      <div
+        className="flex gap-8"
+        style={{
+          width: items.length * itemWidth,
+          transform: `translateX(-${offset}px)`,
+          transition: 'none',
+        }}
+      >
+        {items.map((item, i) => (
+          <div key={i} className="flex flex-col items-center" style={{width: 96}}>
+            <div className="w-24 h-24 rounded-full border border-gray-300 flex items-center justify-center mb-2 bg-white text-4xl">
+              <Icon icon={item.icon} />
+            </div>
+            <span className="font-medium">{item.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default About; 
