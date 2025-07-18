@@ -2,59 +2,100 @@ import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 
 const MenuOverlay = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
+  // Lista de enlaces para animación escalonada
+  const menuItems = [
+    { label: "Home", href: "/", className: "text-black border-b-2 border-black pb-2 block" },
+    { label: "About", href: "/about", className: "text-gray-500 block hover:text-black transition duration-300" },
+    { label: "Portfolio", href: "/portfolio", className: "text-gray-500 block hover:text-black transition duration-300" },
+    { label: "News", href: "/news", className: "text-gray-500 block hover:text-black transition duration-300" },
+    { label: "Contact", href: "/contact", className: "text-gray-500 block hover:text-black transition duration-300" },
+  ];
 
   return (
-    <div className="fixed inset-0 z-50">
+    <div
+      className={`fixed inset-0 z-50 transition-opacity duration-300${isOpen ? ' opacity-100 pointer-events-auto' : ' opacity-0 pointer-events-none'}`}
+    >
       {/* Fondo negro semi-transparente */}
       <div 
         className="absolute inset-0 bg-black bg-opacity-50"
         onClick={onClose}
+        style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
       ></div>
-      <ul className="sal-menu-list" style={{
-        transform: 'translateX(0)',
-        position: 'fixed',
-        right: 0,
-        top: 0,
-        height: '100vh',
-        width: 'auto',
-        minWidth: '438px',
-        display: 'flex',
-        flexFlow: 'column nowrap',
-        alignItems: 'center',
-        justifyContent: 'center',
-        listStyleType: 'none',
-        padding: 0,
-        zIndex: 2,
-        willChange: 'transform',
-        transition: 'transform .5s cubic-bezier(.19,1,.22,1)'
-      }}>
+      <ul className={`sal-menu-list${isOpen ? ' open' : ''}`}
+        style={{
+          position: 'fixed',
+          right: 0,
+          top: 0,
+          height: '100vh',
+          width: 'auto',
+          minWidth: '438px',
+          display: 'flex',
+          flexFlow: 'column nowrap',
+          alignItems: 'center',
+          justifyContent: 'center',
+          listStyleType: 'none',
+          padding: 0,
+          zIndex: 2,
+          willChange: 'transform',
+          // El transform ahora se controla por CSS
+        }}>
         {/* Botón de cerrar */}
         <div className="absolute top-8 right-8">
           <button onClick={onClose} className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
             <Icon icon="mdi:close" className="w-6 h-6 text-white" />
           </button>
         </div>
-        
-        {/* Enlaces de navegación */}
-        <li className="mb-8">
-          <a href="/" className="text-4xl font-bold text-black border-b-2 border-black pb-2 block">Home</a>
-        </li>
-        <li className="mb-8">
-          <a href="/about" className="text-4xl font-bold text-gray-500 block hover:text-black transition duration-300">About</a>
-        </li>
-        <li className="mb-8">
-          <a href="/portfolio" className="text-4xl font-bold text-gray-500 block hover:text-black transition duration-300">Portfolio</a>
-        </li>
-        <li className="mb-8">
-          <a href="/news" className="text-4xl font-bold text-gray-500 block hover:text-black transition duration-300">News</a>
-        </li>
-        <li className="mb-8">
-          <a href="/contact" className="text-4xl font-bold text-gray-500 block hover:text-black transition duration-300">Contact</a>
-        </li>
+        {/* Enlaces de navegación con animación */}
+        {menuItems.map((item, idx) => (
+          <li
+            key={item.label}
+            className={`mb-8 sal-menu-item${isOpen ? ' show' : ''}`}
+            style={{
+              transitionDelay: `${idx * 0.08 + 0.1}s`,
+            }}
+          >
+            <a href={item.href} className={`text-4xl font-bold ${item.className}`}>{item.label}</a>
+          </li>
+        ))}
       </ul>
-      
       <style jsx>{`
+        .sal-menu-list {
+          align-items: center;
+          bottom: 0;
+          display: flex;
+          flex-flow: column nowrap;
+          height: 100vh;
+          justify-content: center;
+          left: auto;
+          list-style-type: none;
+          min-width: 438px;
+          padding: 0;
+          position: fixed;
+          right: 0;
+          top: 0;
+          transform: translateX(200%);
+          transition: transform .5s cubic-bezier(.19,1,.22,1);
+          width: auto;
+          will-change: transform;
+          z-index: 2;
+        }
+        .sal-menu-list.open {
+          transform: translateX(0);
+        }
+        .sal-menu-item {
+          color: #000;
+          font-weight: 500;
+          text-decoration: none;
+          margin: 30px 0;
+          transform: translateX(-100%);
+          opacity: 0;
+          transition: color .15s, transform .5s, opacity .5s;
+          transition-timing-function: cubic-bezier(.19,1,.22,1);
+        }
+        .sal-menu-list.open .sal-menu-item.show {
+          transform: translateX(0);
+          opacity: 1;
+        }
         .sal-menu-list::before {
           background: #fff;
           bottom: 0;
@@ -62,42 +103,36 @@ const MenuOverlay = ({ isOpen, onClose }) => {
           left: 0;
           position: absolute;
           top: 0;
-          transform: skewX(15deg) translateX(0);
+          transform: skewX(15deg) translateX(50%);
           transform-origin: bottom left;
-          transition: transform .5s cubic-bezier(.19,1,.22,1);
+          transition: transform .5s cubic-bezier(.19,1,.22,1), width .5s cubic-bezier(.19,1,.22,1);
           width: 25em;
           will-change: transform;
           z-index: -1;
         }
-        
-        @media (max-width: 1070px) {
-          .sal-menu-list::before {
-            transform: skewX(-23deg) translateX(-40%);
-          }
+        .sal-menu-list.open::before {
+          transform: skewX(15deg) translateX(0);
+          width: 25em;
         }
-        
         @media (max-width: 1199px) {
-          .sal-menu-list::before {
+          .sal-menu-list.open::before {
             transform: skewX(-27deg) translateX(-40%);
             width: 54rem;
           }
         }
-        
         @media (max-width: 1440px) {
-          .sal-menu-list::before {
+          .sal-menu-list.open::before {
             transform: skewX(-32deg) translateX(-47%);
             width: 52rem;
           }
         }
-        
         @media (max-width: 1500px) {
-          .sal-menu-list::before {
+          .sal-menu-list.open::before {
             transform: skewX(-27deg) translateX(-37%);
             width: 47rem;
           }
         }
-        
-        .sal-menu-list::before {
+        .sal-menu-list.open::before {
           transform: skewX(-30deg) translateX(-42%);
           width: 64rem;
         }
