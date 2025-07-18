@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 const About = () => (
   <div className="w-full min-h-screen bg-white flex flex-col gap-16 py-16 px-10">
     {/* Sección 1: Introducción */}
-    <section className="max-w-4xl mx-auto w-full">
+    <section className="mx-auto w-full">
       <h1 className="text-5xl font-extrabold text-black mb-2">About</h1>
       <div className="h-1 w-32 bg-black mb-8" />
       <p className="text-lg text-gray-500 mb-4">
@@ -21,16 +21,16 @@ const About = () => (
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4 text-lg">
         <div>
-          <p className="mb-2"><span className="font-semibold">First Name:</span> Sergio</p>
-          <p className="mb-2"><span className="font-semibold">Last Name:</span> Marquina</p>
-          <p className="mb-2"><span className="font-semibold">Address:</span> 121 Victoria St. London</p>
-          <p className="mb-2"><span className="font-semibold">Age:</span> 26 Years</p>
+          <p className="mb-2"><span className="font-semibold">Nombres:</span> Nery Javier</p>
+          <p className="mb-2"><span className="font-semibold">Apellidos:</span> de la Cruz Huinil</p>
+          <p className="mb-2"><span className="font-semibold">Address:</span> San Lucas Sac.</p>
+          <p className="mb-2"><span className="font-semibold">Edad:</span> 18 años</p>
         </div>
         <div>
-          <p className="mb-2"><span className="font-semibold">Study:</span> Univercity of Oxford</p>
-          <p className="mb-2"><span className="font-semibold">Degree:</span> Master of Science</p>
-          <p className="mb-2"><span className="font-semibold">E-Mail:</span> hello@salva.com</p>
-          <p className="mb-2"><span className="font-semibold">Phone:</span> +20 234 567 8899</p>
+          <p className="mb-2"><span className="font-semibold">Estudios:</span> Centro Educativo Técnico Laboral Kinal</p>
+          <p className="mb-2"><span className="font-semibold">Titulo:</span> Perito en Computación</p>
+          <p className="mb-2"><span className="font-semibold">Correo:</span> nerydelacruzh@gmail.com</p>
+          <p className="mb-2"><span className="font-semibold">Telefono:</span> +502 35904919</p>
         </div>
       </div>
     </section>
@@ -41,7 +41,7 @@ const About = () => (
         {/* Columna izquierda: Programming */}
         <div>
           <div className="flex items-center mb-8">
-            <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Programming</h2>
+            <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Programación</h2>
             <span className="inline-block h-[1.25em] w-0.5 bg-black align-middle" style={{verticalAlign: 'middle'}}></span>
             <div className="flex-1 border-t border-black ml-px" style={{verticalAlign: 'middle'}} />
           </div>
@@ -66,7 +66,7 @@ const About = () => (
         {/* Columna derecha: Frameworks, Librerías, Plugins */}
         <div>
           <div className="flex items-center mb-8">
-            <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Frameworks, Librerías, Plugins</h2>
+            <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Frameworks - Librerías - Plugins</h2>
             <span className="inline-block h-[1.25em] w-0.5 bg-black align-middle" style={{verticalAlign: 'middle'}}></span>
             <div className="flex-1 border-t border-black ml-px" style={{verticalAlign: 'middle'}} />
           </div>
@@ -93,10 +93,10 @@ const About = () => (
             <div className="flex flex-col items-center">
               <svg width="120" height="120" viewBox="0 0 120 120">
                 <circle cx="60" cy="60" r="52" stroke="#e5e7eb" strokeWidth="3" fill="none" />
-                <circle cx="60" cy="60" r="52" stroke="#22d3ee" strokeWidth="3" fill="none" strokeDasharray="326.72" strokeDashoffset="163.36" style={{transition: 'stroke-dashoffset 1s'}} />
-                <text x="50%" y="54%" textAnchor="middle" fontSize="28" fontWeight="bold" fill="#222">50%</text>
+                <circle cx="60" cy="60" r="52" stroke="#22d3ee" strokeWidth="3" fill="none" strokeDasharray="326.72" strokeDashoffset="283.36" style={{transition: 'stroke-dashoffset 1s'}} />
+                <text x="50%" y="54%" textAnchor="middle" fontSize="28" fontWeight="bold" fill="#222">20%</text>
               </svg>
-              <span className="mt-2 font-medium">Tailwind CSS</span>
+              <span className="mt-2 font-medium">React Native</span>
             </div>
           </div>
         </div>
@@ -186,14 +186,14 @@ const About = () => (
         {/* Columna derecha: Experience */}
         <div>
           <div className="flex items-center mb-8">
-            <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Experience</h2>
+            <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Experiencia</h2>
             <span className="inline-block h-[1.25em] w-0.5 bg-black align-middle" style={{verticalAlign: 'middle'}}></span>
             <div className="flex-1 border-t border-black ml-px" style={{verticalAlign: 'middle'}} />
           </div>
           <div className="border border-gray-300 p-6 bg-white">
             <div className="inline-block bg-gray-200 px-4 py-2 text-lg font-medium mb-4">2024-2025</div>
             <div className="font-bold text-lg mb-2">Desarrollador web</div>
-            <div className="text-gray-600">Desarrollar paginas web para empresas del extranjero y aplicaciones web para sistemas POS</div>
+            <div className="text-gray-600">Desarrollo de páginas web de empresas de mexico y crear una aplicacion web para sistema POS Ventas</div>
           </div>
         </div>
       </div>
@@ -202,15 +202,15 @@ const About = () => (
     {/* Sección 5: Servicios */}
     <section className="max-w-5xl mx-auto w-full mt-12">
       <div className="flex items-center mb-8">
-        <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Services</h2>
+        <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Servicios</h2>
         <span className="inline-block h-[1.25em] w-0.5 bg-black align-middle" style={{verticalAlign: 'middle'}}></span>
         <div className="flex-1 border-t border-black ml-px" style={{verticalAlign: 'middle'}} />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {[
-          { title: 'Web Development', icon: 'mdi:laptop', desc: 'Morbi nullam sit dolor diam aenean gravida. Eget commodo blandit volutpat quis tristique risus, sed. Sed et.' },
-          { title: 'App Development', icon: 'mdi:cellphone', desc: 'Morbi nullam sit dolor diam aenean gravida. Eget commodo blandit volutpat quis tristique risus, sed. Sed et.' },
-          { title: 'Animation', icon: 'mdi:cube', desc: 'Morbi nullam sit dolor diam aenean gravida. Eget commodo blandit volutpat quis tristique risus, sed. Sed et.' },
+          { title: 'Desarrollo Web', icon: 'mdi:laptop', desc: 'Crear paginas y aplicaciones web escalables, seguras y rapidas. Siempre manteniendo un diseño intuitivo y una buena experiencia de usuario.' },
+          { title: 'Desarrollo Movil', icon: 'mdi:cellphone', desc: 'Crear aplicaciones multiplaforma seguras, escalables y buena experiencia de usuario. ' },
+          { title: 'Animación', icon: 'mdi:cube', desc: 'Crear animaciones 2d de ultima generacion para anuncios publicitarios, paginas web, videos, etc ...' },
         ].map((srv, i) => (
           <div key={i} className="service-card-wrap relative border border-gray-300 bg-white p-8 flex flex-col items-center text-center min-h-[260px] overflow-hidden group transition-colors duration-300">
             {/* Esquina decorativa */}
@@ -228,7 +228,7 @@ const About = () => (
     {/* Sección 5: Interests - Carrusel automático */}
     <section className="max-w-5xl mx-auto w-full mt-12">
       <div className="flex items-center mb-8">
-        <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Interests</h2>
+        <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Intereses</h2>
         <span className="inline-block h-[1.25em] w-0.5 bg-black align-middle" style={{verticalAlign: 'middle'}}></span>
         <div className="flex-1 border-t border-black ml-px" style={{verticalAlign: 'middle'}} />
       </div>
@@ -250,7 +250,6 @@ function InterestsCarousel() {
     { name: "Fotografía", icon: "mdi:camera" },
     { name: "Ciclismo", icon: "mdi:bike" },
     { name: "Música", icon: "mdi:music" },
-    { name: "Cocinar", icon: "mdi:chef-hat" },
     { name: "Cine", icon: "mdi:movie" },
     { name: "Arte", icon: "mdi:palette" },
     { name: "Correr", icon: "mdi:run" },
@@ -293,11 +292,11 @@ function InterestsCarousel() {
         }}
       >
         {items.map((item, i) => (
-          <div key={i} className="flex flex-col items-center" style={{width: 96}}>
-            <div className="w-24 h-24 rounded-full border border-gray-300 flex items-center justify-center mb-2 bg-white text-4xl">
+          <div key={i} className="flex flex-col items-center" style={{width: 140}}>
+            <div className="w-32 h-32 rounded-full border border-gray-300 flex items-center justify-center mb-2 bg-white text-6xl">
               <Icon icon={item.icon} />
             </div>
-            <span className="font-medium">{item.name}</span>
+            <span className="font-medium text-lg">{item.name}</span>
           </div>
         ))}
       </div>
@@ -305,4 +304,4 @@ function InterestsCarousel() {
   );
 }
 
-export default About; 
+export  default About; 
