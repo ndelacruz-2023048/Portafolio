@@ -235,6 +235,38 @@ const About = () => (
       <InterestsCarousel />
     </section>
 
+    {/* Sección 6: Clientes */}
+    <section className="max-w-6xl mx-auto w-full mt-16 mb-8">
+      <div className="flex items-center mb-8">
+        <h2 className="text-xl font-extrabold tracking-widest mr-4 uppercase">Clientes</h2>
+        <span className="inline-block h-[1.25em] w-0.5 bg-black align-middle" style={{verticalAlign: 'middle'}}></span>
+        <div className="flex-1 border-t-2 border-black ml-2" style={{verticalAlign: 'middle'}} />
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {/* Logo 1 */}
+        <div className="client-box flex items-center justify-center border border-gray-200 bg-white p-8 min-h-[80px] transition-all duration-200 cursor-pointer">
+          <span className="client-logo text-3xl font-bold text-gray-400 transition-all duration-200">Dalton</span>
+        </div>
+        {/* Logo 2 */}
+        <div className="client-box flex items-center justify-center border border-gray-200 bg-white p-8 min-h-[80px] transition-all duration-200 cursor-pointer">
+          <span className="client-logo text-3xl font-bold text-gray-400 transition-all duration-200">Breezee</span>
+        </div>
+      </div>
+      <style>{`
+        .client-box:hover {
+          border-color: #000;
+          background: #fff;
+        }
+        .client-box:hover .client-logo {
+          color: #000;
+          font-weight: 900;
+        }
+        .client-box {
+          box-sizing: border-box;
+        }
+      `}</style>
+    </section>
+
     {/* Aquí puedes agregar más secciones en el futuro */}
   </div>
 );
