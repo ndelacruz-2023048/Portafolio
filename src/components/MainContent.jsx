@@ -202,7 +202,7 @@ const MainContent = ({ children }) => {
         </div>
         
         {/* Contenido dinámico */}
-        <div className="flex-1 flex flex-col justify-center items-start px-10">
+        <div className="flex-1 flex flex-col justify-start items-start px-10 scroll-invisible">
           {children}
         </div>
         

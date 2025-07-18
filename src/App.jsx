@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LeftImage from "./components/LeftImage";
 import MainContent from "./components/MainContent";
 import HomePage from "./components/HomePage";
+import About from "./components/About";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           <LeftImage />
           <Routes>
             <Route path="/" element={<MainContent><HomePage /></MainContent>} />
+            <Route path="/about" element={<MainContent><About /></MainContent>} />
             {/* Aquí puedes agregar más rutas dinámicas, por ejemplo: */}
             {/* <Route path="/about" element={<MainContent><AboutPage /></MainContent>} /> */}
           </Routes>
