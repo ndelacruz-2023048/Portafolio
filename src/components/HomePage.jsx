@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const TITLE = "Sergio Marquina";
+const TITLE = "Nery de la Cruz";
 
 const HomePage = () => {
   const [visibleLetters, setVisibleLetters] = useState(Array(TITLE.length).fill(false));
@@ -53,7 +53,7 @@ const HomePage = () => {
       </h1>
       <div className="h-1 w-32 bg-black mt-6 mb-6" />
       <p className="text-lg text-black mb-10 max-w-xl">
-        Professional UI/UX designer and web developer based on London. Sometimes works as a freelancer.
+        Desarrollador Web Junior Fullstack, apasionado por cada proyecto que realizo, tratando dejar un log con cada cliente que trabajo. Me encanta estar aprendiendo en todo momento.
       </p>
       <div className="flex gap-6 mb-12">
         <button className="px-8 py-4 bg-black text-white font-bold text-lg hover:bg-gray-900 transition shadow focus:outline-none">GET IN TOUCH</button>

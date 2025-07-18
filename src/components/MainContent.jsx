@@ -154,10 +154,10 @@ const SocialSidebar = ({ onMenuClick }) => {
       {/* Sección central - coincide con children */}
       <div className="flex-1 flex flex-col justify-center items-center gap-4">
         <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition cursor-pointer">
-          <Icon icon="mdi:facebook" className="w-6 h-6 text-black" />
+          <Icon icon="mdi:github" className="w-6 h-6 text-black" />
         </div>
         <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition cursor-pointer">
-          <Icon icon="mdi:twitter" className="w-6 h-6 text-black" />
+          <Icon icon="mdi:facebook" className="w-6 h-6 text-black" />
         </div>
         <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition cursor-pointer">
           <Icon icon="mdi:instagram" className="w-6 h-6 text-black" />
