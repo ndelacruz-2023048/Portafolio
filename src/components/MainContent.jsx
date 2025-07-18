@@ -143,7 +143,7 @@ const MenuOverlay = ({ isOpen, onClose }) => {
 
 const SocialSidebar = ({ onMenuClick }) => {
   return (
-    <div className="flex-[0.1] flex flex-col border-l-2 border-black bg-white">
+    <div className="w-[10%] flex flex-col border-l-2 border-black bg-white">
       {/* Sección superior - coincide exactamente con header */}
       <div className="flex items-center justify-center h-24 border-b-2 border-black">
         <button onClick={onMenuClick} className="w-8 h-8 flex items-center justify-center">
@@ -193,9 +193,9 @@ const MainContent = ({ children }) => {
   };
 
   return (
-    <div className="flex-1 flex bg-white border-l border-black">
+    <div className="w-[60%] flex bg-white border-l border-black">
       {/* Contenido principal (90%) */}
-      <div className="flex-[0.9] flex flex-col">
+      <div className="w-[90%] flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between px-10 py-8 border-b-2 border-black h-24">
           <div className="text-4xl font-extrabold tracking-widest">SALVA</div>
