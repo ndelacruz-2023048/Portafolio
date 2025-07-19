@@ -19,7 +19,7 @@ const portfolioItems = [
     alt: "Faro", 
     title: "Dalton QJMotor",
     description: "Sitio web corporativo para empresa de motocicletas",
-    technologies: ["WordPress", "PHP", "MySQL"],
+    technologies: ["React", "Express", "MySQL"],
     liveUrl: "https://daltonqjmotor.com.mx/"
   },
   { 
@@ -29,7 +29,7 @@ const portfolioItems = [
     alt: "Ciudad", 
     title: "Breezee",
     description: "Aplicación de gestión de citas y reservas",
-    technologies: ["HTML", "CSS", "JAVASCRIPT", "Elementor"],
+    technologies: ["HTML", "CSS", "JAVASCRIPT", "React"],
     liveUrl: "http://breezee.mx",
   },
   { 
@@ -165,7 +165,7 @@ const Portfolio = () => {
       <div className="h-1 w-32 bg-black mb-8" />
       {/* Descripción */}
       <p className="text-lg text-gray-700 max-w-3xl mb-6">
-        Actualmente, estoy trabajando en temas profesionales de WordPress visualmente sofisticados y tecnológicamente avanzados, responsivos y multi-funcionales. Si estás interesado en trabajar conmigo, haz clic en el botón de abajo y contáctame ahora mismo para que podamos hablar sobre tu proyecto.
+        Actualmente, estoy trabajando en aplicaciones web full stack con React y Express, desarrollando soluciones tecnológicamente avanzadas, responsivas y multi-funcionales. Si estás interesado en trabajar conmigo, haz clic en el botón de abajo y contáctame ahora mismo para que podamos hablar sobre tu proyecto.
       </p>
       {/* Botón de contacto */}
       <a onClick={()=> window.open("https://wa.link/7qw6fk")} className="inline-block w-full max-w-md">

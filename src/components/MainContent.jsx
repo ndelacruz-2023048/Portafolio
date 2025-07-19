@@ -8,9 +8,9 @@ const MenuOverlay = ({ isOpen, onClose }) => {
   // Lista de enlaces para animación escalonada
   const menuItems = [
     { label: "Home", href: "/", className: "block" },
-    { label: "About", href: "/about", className: "block" },
-    { label: "Portfolio", href: "/portfolio", className: "block" },
-    { label: "Contact", href: "/contact", className: "block" },
+    { label: "Acerca", href: "/about", className: "block" },
+    { label: "Portafolio", href: "/portfolio", className: "block" },
+    { label: "Contacto", href: "/contact", className: "block" },
   ];
 
   return (
@@ -57,14 +57,14 @@ const MenuOverlay = ({ isOpen, onClose }) => {
           return (
             <li
               key={item.label}
-              className={`mb-8 sal-menu-item${isOpen ? ' show' : ''}`}
+              className={`mb-12 sal-menu-item${isOpen ? ' show' : ''}`}
               style={{
                 transitionDelay: `${idx * 0.08 + 0.1}s`,
               }}
             >
               <Link 
                 to={item.href} 
-                className={`text-4xl font-bold ${item.className} ${activeClass}`}
+                className={`text-6xl font-bold ${item.className} ${activeClass}`}
                 onClick={onClose}
               >
                 {item.label}

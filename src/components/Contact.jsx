@@ -9,14 +9,13 @@ const Contact = () => {
       
       {/* Descripción */}
       <p className="text-lg text-gray-700 max-w-3xl mb-12">
-        ¿Tienes un proyecto en mente? ¿Necesitas ayuda con desarrollo web, diseño o animaciones? 
-        Estoy aquí para ayudarte a hacer realidad tus ideas. Contáctame y conversemos sobre cómo 
-        podemos trabajar juntos en tu próximo proyecto.
+        ¿Tienes alguna idea? ¿Necesitas ayuda con desarrollo web, diseño o animaciones? 
+        Sera un honor poder trabajar contigo, ayudandote a dar tus primeros pasos o continuar en este gran camino de la tecnologia, solo contactame y vere la forma de ayudarte.
       </p>
 
       {/* GET IN TOUCH Section */}
       <div className="flex items-center gap-4 mb-12">
-        <h2 className="text-2xl font-bold text-black uppercase">GET IN TOUCH</h2>
+        <h2 className="text-2xl font-bold text-black uppercase">Contactame</h2>
         <div className="flex-1 flex items-center">
           <div className="w-8 h-0.5 bg-black"></div>
           <div className="w-0.5 h-8 bg-black ml-2"></div>

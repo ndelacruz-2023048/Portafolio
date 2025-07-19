@@ -8,7 +8,7 @@ const About = () => (
       <h1 className="text-5xl font-extrabold text-black mb-2">About</h1>
       <div className="h-1 w-32 bg-black mb-8" />
       <p className="text-lg text-gray-500 mb-4">
-        I am a freelancer based in the United Kingdom and i have been building noteworthy UX/UI designs and websites for years, which comply with the latest design trends. I help convert a vision and an idea into meaningful and useful products. Having a sharp eye for product evolution helps me prioritize tasks, iterate fast.
+        Soy un desarrollador web freelance de Guatemala, especializado en crear experiencias digitales únicas y funcionales. Actualmente trabajo en aplicaciones web full stack con React y Express, desarrollando soluciones tecnológicamente avanzadas, responsivas y multi-funcionales. Mi pasión es convertir ideas en productos digitales significativos que no solo se vean bien, sino que también funcionen perfectamente. Con experiencia en desarrollo web, aplicaciones móviles y animaciones 2D.
       </p>
     </section>
 
@@ -47,8 +47,8 @@ const About = () => (
           </div>
           {/* Barras de progreso */}
           <div className="mb-6">
-            <div className="flex justify-between mb-1"><span>WordPress</span><span>20%</span></div>
-            <div className="w-full h-1.5 bg-gray-200 rounded"><div className="h-1.5 bg-blue-600 rounded" style={{width: '20%'}}></div></div>
+            <div className="flex justify-between mb-1"><span>React</span><span>85%</span></div>
+            <div className="w-full h-1.5 bg-gray-200 rounded"><div className="h-1.5 bg-blue-600 rounded" style={{width: '85%'}}></div></div>
           </div>
           <div className="mb-6">
             <div className="flex justify-between mb-1"><span>HTML & CSS</span><span>80%</span></div>
@@ -80,14 +80,14 @@ const About = () => (
               </svg>
               <span className="mt-2 font-medium">React</span>
             </div>
-            {/* Elementor */}
+            {/* Express */}
             <div className="flex flex-col items-center">
               <svg width="120" height="120" viewBox="0 0 120 120">
                 <circle cx="60" cy="60" r="52" stroke="#e5e7eb" strokeWidth="3" fill="none" />
-                <circle cx="60" cy="60" r="52" stroke="#ef4444" strokeWidth="3" fill="none" strokeDasharray="326.72" strokeDashoffset="130.688" style={{transition: 'stroke-dashoffset 1s'}} />
-                <text x="50%" y="54%" textAnchor="middle" fontSize="28" fontWeight="bold" fill="#222">60%</text>
+                <circle cx="60" cy="60" r="52" stroke="#22c55e" strokeWidth="3" fill="none" strokeDasharray="326.72" strokeDashoffset="130.688" style={{transition: 'stroke-dashoffset 1s'}} />
+                <text x="50%" y="54%" textAnchor="middle" fontSize="28" fontWeight="bold" fill="#222">75%</text>
               </svg>
-              <span className="mt-2 font-medium">Elementor</span>
+              <span className="mt-2 font-medium">Express</span>
             </div>
             {/* Tailwind CSS */}
             <div className="flex flex-col items-center">
