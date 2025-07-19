@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 
 const MenuOverlay = ({ isOpen, onClose }) => {
+  const location = useLocation();
+  
   // Lista de enlaces para animación escalonada
   const menuItems = [
-    { label: "Home", href: "/", className: "text-black border-b-2 border-black pb-2 block" },
-    { label: "About", href: "/about", className: "text-gray-500 block hover:text-black transition duration-300" },
-    { label: "Portfolio", href: "/portfolio", className: "text-gray-500 block hover:text-black transition duration-300" },
-    { label: "News", href: "/news", className: "text-gray-500 block hover:text-black transition duration-300" },
-    { label: "Contact", href: "/contact", className: "text-gray-500 block hover:text-black transition duration-300" },
+    { label: "Home", href: "/", className: "block" },
+    { label: "About", href: "/about", className: "block" },
+    { label: "Portfolio", href: "/portfolio", className: "block" },
+    { label: "Contact", href: "/contact", className: "block" },
   ];
 
   return (
@@ -47,17 +48,30 @@ const MenuOverlay = ({ isOpen, onClose }) => {
           </button>
         </div>
         {/* Enlaces de navegación con animación */}
-        {menuItems.map((item, idx) => (
-          <li
-            key={item.label}
-            className={`mb-8 sal-menu-item${isOpen ? ' show' : ''}`}
-            style={{
-              transitionDelay: `${idx * 0.08 + 0.1}s`,
-            }}
-          >
-            <a href={item.href} className={`text-4xl font-bold ${item.className}`}>{item.label}</a>
-          </li>
-        ))}
+        {menuItems.map((item, idx) => {
+          const isActive = location.pathname === item.href;
+          const activeClass = isActive 
+            ? "text-black border-b-2 border-black pb-2" 
+            : "text-gray-500 hover:text-black transition duration-300";
+          
+          return (
+            <li
+              key={item.label}
+              className={`mb-8 sal-menu-item${isOpen ? ' show' : ''}`}
+              style={{
+                transitionDelay: `${idx * 0.08 + 0.1}s`,
+              }}
+            >
+              <Link 
+                to={item.href} 
+                className={`text-4xl font-bold ${item.className} ${activeClass}`}
+                onClick={onClose}
+              >
+                {item.label}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
       <style jsx>{`
         .sal-menu-list {
