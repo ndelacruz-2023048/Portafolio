@@ -209,7 +209,7 @@ const MainContent = ({ children }) => {
         
         {/* Footer */}
         <div className="flex items-center justify-between px-10 py-4 border-t border-black text-xs bg-white h-16">
-          <span>Copyright © 2024 Salva ♥ the_krishna</span>
+          <span>Copyright © 2025 Nery ♥ @nerydelacruzh</span>
           <button className="flex items-center gap-2 px-4 py-2 border rounded-full text-black border-black hover:bg-gray-100 transition focus:outline-none">
             <span>Weekend Mode</span>
             <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>

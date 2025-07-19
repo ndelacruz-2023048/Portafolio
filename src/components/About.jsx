@@ -178,14 +178,14 @@ const About = () => (
             <div className="flex-1 border-t border-black ml-px" style={{verticalAlign: 'middle'}} />
           </div>
           <div className="border border-gray-300 p-6 bg-white">
-            <div className="inline-block bg-gray-200 px-4 py-2 text-lg font-medium mb-4">2023 - 2025</div>
-            <div className="font-bold text-lg mb-2">Perito en Computación</div>
-            <div className="text-gray-600">Desarrollo de aplicaciones web y móviles con Javascript, diseño de redes informáticas con Cisco System, aplicaciones de escritorio y web con Java. Manejo de base de datos relacionales y no relacionales</div>
-          </div>
-          <div className="border border-gray-300 p-6 bg-white">
             <div className="inline-block bg-gray-200 px-4 py-2 text-lg font-medium mb-4">2023</div>
             <div className="font-bold text-lg mb-2">CCNA: Introduction to Networks</div>
             <div className="text-gray-600">Conocimiento de redes, incluido el direccionamiento IP, cómo los protocolos físicos de enlace de datos admiten Ethernet, puede configurar la conectividad entre conmutadores, enrutadores y dispositivos finales para proporcionar acceso a recursos locales y remotos.</div>
+          </div>
+          <div className="border border-gray-300 p-6 bg-white">
+            <div className="inline-block bg-gray-200 px-4 py-2 text-lg font-medium mb-4">2023 - 2025</div>
+            <div className="font-bold text-lg mb-2">Perito en Computación</div>
+            <div className="text-gray-600">Desarrollo de aplicaciones web y móviles con Javascript, diseño de redes informáticas con Cisco System, aplicaciones de escritorio y web con Java. Manejo de base de datos relacionales y no relacionales</div>
           </div>
         </div>
         {/* Columna derecha: Experience */}

@@ -10,8 +10,7 @@ const portfolioItems = [
     title: "POS Ventas",
     description: "Sistema de punto de venta completo con gestión de inventario y reportes",
     technologies: ["React", "Node.js", "MongoDB"],
-    liveUrl: "https://pos-ventas.com",
-    githubUrl: "https://github.com/tu-usuario/pos-ventas"
+    githubUrl: "https://github.com/ndelacruz-2023048/POSVenta.git"
   },
   { 
     id: 2, 
@@ -21,7 +20,7 @@ const portfolioItems = [
     title: "Dalton QJMotor",
     description: "Sitio web corporativo para empresa de motocicletas",
     technologies: ["WordPress", "PHP", "MySQL"],
-    liveUrl: "https://daltonqjmotor.com"
+    liveUrl: "https://daltonqjmotor.com.mx/"
   },
   { 
     id: 3, 
@@ -30,9 +29,8 @@ const portfolioItems = [
     alt: "Ciudad", 
     title: "Breezee",
     description: "Aplicación de gestión de citas y reservas",
-    technologies: ["React", "Firebase", "Tailwind CSS"],
-    liveUrl: "https://breezee-app.com",
-    githubUrl: "https://github.com/tu-usuario/breezee"
+    technologies: ["HTML", "CSS", "JAVASCRIPT", "Elementor"],
+    liveUrl: "http://breezee.mx",
   },
   { 
     id: 4, 
@@ -63,8 +61,7 @@ const portfolioItems = [
     title: "Agua Comun",
     description: "Sistema de gestión para cooperativa de agua",
     technologies: ["JavaScript", "React", "Node.js"],
-    liveUrl: "https://aguacomun.org",
-    githubUrl: "https://github.com/tu-usuario/agua-comun"
+    githubUrl: "https://github.com/ndelacruz-2023048/AguaComun_Frontend.git"
   },
   { 
     id: 7, 
@@ -86,7 +83,7 @@ const portfolioItems = [
     description: "Plataforma educativa para prevención de violencia",
     technologies: ["React", "Node.js", "MongoDB"],
     liveUrl: "https://limae.org",
-    githubUrl: "https://github.com/tu-usuario/limae"
+    githubUrl: "https://github.com/ndelacruz-2023048/Limae_Frontend.git"
   },
   { 
     id: 9, 
@@ -128,9 +125,8 @@ const portfolioItems = [
     alt: "Youtube 2", 
     title: "Animación de personajes",
     description: "Animaciones 2D para videojuegos y aplicaciones",
-    technologies: ["Adobe Animate", "Spine", "Unity"],
-    liveUrl: "https://animaciones-2d.com",
-    githubUrl: "https://github.com/tu-usuario/animaciones"
+    technologies: ["Adobe After Effects", "Rigging", "Adobe Illustrator"],
+
   },
 ];
 
@@ -172,7 +168,7 @@ const Portfolio = () => {
         Actualmente, estoy trabajando en temas profesionales de WordPress visualmente sofisticados y tecnológicamente avanzados, responsivos y multi-funcionales. Si estás interesado en trabajar conmigo, haz clic en el botón de abajo y contáctame ahora mismo para que podamos hablar sobre tu proyecto.
       </p>
       {/* Botón de contacto */}
-      <a href="mailto:nerydelacruzh@gmail.com" className="inline-block w-full max-w-md">
+      <a onClick={()=> window.open("https://wa.link/7qw6fk")} className="inline-block w-full max-w-md">
         <button className="w-full bg-black text-white font-extrabold text-lg py-4 px-6 mb-10 hover:bg-gray-900 transition">
           SI ESTÁS INTERESADO, CONTÁCTAME
         </button>
