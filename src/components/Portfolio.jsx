@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const portfolioItems = [
   { id: 1, type: "clientes", src: "https://res.cloudinary.com/dtmwybty7/image/upload/v1752880554/Captura_de_pantalla_2025-07-18_171516_ytp0hd.png", alt: "POS Ventas", title: "POS Ventas" },
@@ -8,11 +9,11 @@ const portfolioItems = [
   { id: 5, type: "typescript", src: "https://res.cloudinary.com/dtmwybty7/image/upload/v1752881690/Captura_de_pantalla_2025-07-18_173425_hr0p0o.png", title: "Cotizador Criptomonedas" },
   { id: 6, type: "javascript", src: "https://res.cloudinary.com/dtmwybty7/image/upload/v1752881894/Captura_de_pantalla_2025-07-18_173658_lzknpf.png", alt: "Vimeo", title: "Agua Comun" },
   { id: 7, type: "vanilla", src: "https://res.cloudinary.com/dtmwybty7/image/upload/v1752882137/Captura_de_pantalla_2025-07-18_174149_tpdywc.png", alt: "Youtube", title: "Letras animadas" },
-  { id: 8, type: "javascript", src: "https://res.cloudinary.com/dtmwybty7/image/upload/v1752882739/Captura_de_pantalla_2025-07-18_175154_fqivaw.png", alt: "Paisaje", title: "Prevención violencia" },
+  { id: 8, type: "javascript", src: "https://res.cloudinary.com/dtmwybty7/image/upload/v1752882739/Captura_de_pantalla_2025-07-18_175154_fqivaw.png", alt: "Paisaje", title: "Limae - Prevención violencia" },
   { id: 9, type: "typescript", src: "https://res.cloudinary.com/dtmwybty7/image/upload/v1752881490/Captura_de_pantalla_2025-07-18_173052_cne0ih.png", alt: "Detalle 2", title: "Veterinaria Pacientes" },
   { id: 10, type: "vanilla", src: "https://res.cloudinary.com/dtmwybty7/image/upload/v1752882288/Captura_de_pantalla_2025-07-18_174414_ctepvo.png", alt: "Soundcloud 2", title: "Evento al presionar tecla" },
   { id: 11, type: "vanilla", src: "https://res.cloudinary.com/dtmwybty7/image/upload/v1752882477/Captura_de_pantalla_2025-07-18_174737_mjt8r9.png", alt: "Vimeo 2", title: "Api Pokedex" },
-  { id: 12, type: "youtube", src: "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80", alt: "Youtube 2", title: "Tutorial Youtube" },
+  { id: 12, type: "animacion", src: "https://res.cloudinary.com/dtmwybty7/image/upload/v1752888519/Ciclo_de_Correr_02_-_Huyendo_-_GIF_Estatico_d0j7yq.gif", alt: "Youtube 2", title: "Animación de personajes" },
 ];
 
 const tabs = [
@@ -21,11 +22,21 @@ const tabs = [
   { label: "React - Typescript", value: "typescript" },
   { label: "React - Javascript", value: "javascript" },
   { label: "Javascript - Vanilla", value: "vanilla" },
-  { label: "Youtube", value: "youtube" },
+  { label: "Animacion 2D", value: "animacion" },
 ];
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState("all");
+  const navigate = useNavigate();
+  
+  const manejadorCards = (value) => {
+    setActiveTab(value)
+  }
+
+  // Función para manejar enlaces externos
+  const handleExternalLink = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   // Filtrado según el tab activo
   const filteredItems =
@@ -53,11 +64,12 @@ const Portfolio = () => {
         {tabs.map((tab) => (
           <button
             key={tab.value}
-            onClick={() => setActiveTab(tab.value)}
+            onClick={() => manejadorCards(tab.value)}
             className={`uppercase font-bold tracking-widest text-base pb-2 border-b-2 transition-all duration-200 ${
               activeTab === tab.value ? "border-black text-black" : "border-transparent text-gray-500 hover:text-black"
             }`}
             style={{ letterSpacing: "0.15em" }}
+            
           >
             {tab.label}
           </button>

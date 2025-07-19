@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
+import { useNavigate } from "react-router-dom";
 
 const MenuOverlay = ({ isOpen, onClose }) => {
   // Lista de enlaces para animación escalonada
@@ -153,16 +154,16 @@ const SocialSidebar = ({ onMenuClick }) => {
       
       {/* Sección central - coincide con children */}
       <div className="flex-1 flex flex-col justify-center items-center gap-4">
-        <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition cursor-pointer">
+        <div onClick={()=> window.open("https://github.com/nerydelacruz")} className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition cursor-pointer">
           <Icon icon="mdi:github" className="w-6 h-6 text-black" />
         </div>
-        <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition cursor-pointer">
+        <div onClick={()=>window.open("https://www.facebook.com/neryjavier.delacruzhuinil")} className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition cursor-pointer">
           <Icon icon="mdi:facebook" className="w-6 h-6 text-black" />
         </div>
-        <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition cursor-pointer">
+        <div onClick={()=>window.open("https://www.instagram.com/nerydelacruzh/")} className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition cursor-pointer">
           <Icon icon="mdi:instagram" className="w-6 h-6 text-black" />
         </div>
-        <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition cursor-pointer">
+        <div onClick={()=>window.open("https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BInuFtxXlRbuu7NPXXdRvhQ%3D%3D")} className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition cursor-pointer">
           <Icon icon="mdi:linkedin" className="w-6 h-6 text-black" />
         </div>
         
