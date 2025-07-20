@@ -5,7 +5,7 @@ const About = () => (
   <div className="w-full min-h-screen bg-white flex flex-col gap-16 py-16 px-10">
     {/* Sección 1: Introducción */}
     <section className="mx-auto w-full">
-      <h1 className="text-5xl font-extrabold text-black mb-2">About</h1>
+      <h1 className="text-5xl font-extrabold text-black mb-2">Acerca de</h1>
       <div className="h-1 w-32 bg-black mb-8" />
       <p className="text-lg text-gray-500 mb-4">
         Soy un desarrollador web freelance de Guatemala, especializado en crear experiencias digitales únicas y funcionales. Actualmente trabajo en aplicaciones web full stack con React y Express, desarrollando soluciones tecnológicamente avanzadas, responsivas y multi-funcionales. Mi pasión es convertir ideas en productos digitales significativos que no solo se vean bien, sino que también funcionen perfectamente. Con experiencia en desarrollo web, aplicaciones móviles y animaciones 2D.
@@ -15,7 +15,7 @@ const About = () => (
     {/* Sección 2: Información personal */}
     <section className="max-w-5xl mx-auto w-full">
       <div className="flex items-center mb-8">
-        <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">PERSONAL INFORMATIONS</h2>
+        <h2 className="text-xl font-bold tracking-wide mr-2 uppercase whitespace-nowrap">Información personal</h2>
         <span className="inline-block h-[1.25em] w-0.5 bg-black align-middle" style={{verticalAlign: 'middle'}}></span>
         <div className="flex-1 border-t border-black ml-px" style={{verticalAlign: 'middle'}} />
       </div>

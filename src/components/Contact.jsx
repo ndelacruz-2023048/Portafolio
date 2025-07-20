@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div className="w-full min-h-screen bg-white flex flex-col gap-10 py-16 px-10">
       {/* Título y línea */}
-      <h1 className="text-5xl font-extrabold text-black mb-2">Contact</h1>
+      <h1 className="text-5xl font-extrabold text-black mb-2">Contacto</h1>
       <div className="h-1 w-32 bg-black mb-8" />
       
       {/* Descripción */}
