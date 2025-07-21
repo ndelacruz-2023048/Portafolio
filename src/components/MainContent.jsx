@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
+import DesktopMenuOverlay from "./DesktopMenuOverlay";
 
 const MenuOverlay = ({ isOpen, onClose }) => {
   const location = useLocation();
@@ -158,7 +159,7 @@ const MenuOverlay = ({ isOpen, onClose }) => {
 
 const SocialSidebar = ({ onMenuClick }) => {
   return (
-    <div className="w-[10%] flex flex-col border-l-2 border-black bg-white">
+    <div className="w-[10%] hidden lg:flex flex-col border-l-2 border-black bg-white">
       {/* Sección superior - coincide exactamente con header */}
       <div className="flex items-center justify-center h-24 border-b-2 border-black">
         <button onClick={onMenuClick} className="w-8 h-8 flex items-center justify-center">
@@ -198,6 +199,7 @@ const SocialSidebar = ({ onMenuClick }) => {
 
 const MainContent = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMovilMenuOpen, setIsMovilMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
     setIsMenuOpen(true);
@@ -207,13 +209,24 @@ const MainContent = ({ children }) => {
     setIsMenuOpen(false);
   };
 
+  const handleMovilMenuClose = ()=>{
+    setIsMovilMenuOpen(false);
+  }
+
+  const handleMovilMenuOpen = () => {
+    setIsMovilMenuOpen(true);
+  }
+
   return (
-    <div className="w-[60%] flex bg-white border-l border-black">
+    <div className="lg:w-[60%] w-full flex bg-white border-l border-black">
       {/* Contenido principal (90%) */}
-      <div className="w-[90%] flex flex-col">
+      <div className=" lg:w-[90%] w-full flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between px-10 py-8 border-b-2 border-black h-24">
           <div className="text-4xl font-extrabold tracking-widest">Nery</div>
+          <button onClick={handleMovilMenuOpen} className="w-8 h-8 lg:hidden flex items-center justify-center">
+            <Icon icon="mdi:menu" className="w-8 h-8 text-black" />
+          </button>
         </div>
         
         {/* Contenido dinámico */}
@@ -236,6 +249,9 @@ const MainContent = ({ children }) => {
       
       {/* Menú overlay */}
       <MenuOverlay isOpen={isMenuOpen} onClose={handleCloseMenu} />
+
+      {/* Imagen de perfil en overlay */}
+      <DesktopMenuOverlay isOpen={isMovilMenuOpen} onClose={handleMovilMenuClose}/>
     </div>
   );
 };
