@@ -1,8 +1,15 @@
 import React from "react";
 import { Icon } from "@iconify/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const DesktopMenuOverlay = ({ isOpen, onClose }) => {
+  const location = useLocation();
+  const menuItems = [
+    { label: "Home", href: "/" },
+    { label: "Acerca", href: "/about" },
+    { label: "Portafolio", href: "/portfolio" },
+    { label: "Contacto", href: "/contact" },
+  ];
   return (
     <div
       className={`salv-menu-design-two${isOpen ? ' open' : ''}`}
@@ -32,17 +39,25 @@ const DesktopMenuOverlay = ({ isOpen, onClose }) => {
       <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1.5rem', minHeight: '70vh'}}>
         <img src="https://res.cloudinary.com/dtmwybty7/image/upload/v1752900108/Blanco_y_negro_mdkxug.png" alt="profile" className="w-40 h-40 rounded-xl object-cover mb-2" />
         <div className="flex gap-6 mb-2">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><Icon icon="mdi:facebook" className="w-6 h-6 text-black" /></a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Icon icon="mdi:twitter" className="w-6 h-6 text-black" /></a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><Icon icon="mdi:instagram" className="w-6 h-6 text-black" /></a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><Icon icon="mdi:linkedin" className="w-6 h-6 text-black" /></a>
+          <a href="https://github.com/nerydelacruz" target="_blank" rel="noopener noreferrer"><Icon icon="mdi:github" className="w-6 h-6 text-black" /></a>
+          <a href="https://www.facebook.com/neryjavier.delacruzhuinil" target="_blank" rel="noopener noreferrer"><Icon icon="mdi:facebook" className="w-6 h-6 text-black" /></a>
+          <a href="https://www.instagram.com/nerydelacruzh/" target="_blank" rel="noopener noreferrer"><Icon icon="mdi:instagram" className="w-6 h-6 text-black" /></a>
+          <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BInuFtxXlRbuu7NPXXdRvhQ%3D%3D" target="_blank" rel="noopener noreferrer"><Icon icon="mdi:linkedin" className="w-6 h-6 text-black" /></a>
         </div>
         <nav className="flex flex-col items-center gap-4">
-          <Link to="/" className="text-3xl font-bold text-black">Home</Link>
-          <Link to="/about" className="text-3xl font-bold text-gray-400">About</Link>
-          <Link to="/portfolio" className="text-3xl font-bold text-gray-400">Portfolio</Link>
-          <Link to="/news" className="text-3xl font-bold text-gray-400">News</Link>
-          <Link to="/contact" className="text-3xl font-bold text-gray-400">Contact</Link>
+          {menuItems.map((item) => {
+            const isActive = location.pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                to={item.href}
+                className={`text-3xl font-bold ${isActive ? "text-black" : "text-gray-400"}`}
+                onClick={onClose}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
       </div>
       <style>{`
